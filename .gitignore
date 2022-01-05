@@ -1,0 +1,5 @@
+# My stuff to be ignored
+secrets.toml
+.streamlit/
+.DS_Store
+.ipynb
