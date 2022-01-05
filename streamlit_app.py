@@ -1,6 +1,12 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[ ]:
+
+
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
+import matplotlib as plt
 import seaborn as sns
 
 st.title("Palmer's Penguins")
@@ -22,3 +28,4 @@ plt.xlabel(selected_x_var)
 plt.ylabel(selected_y_var)
 plt.title("Scatterplot of Palmer's Penguins")
 st.pyplot(fig)
+
