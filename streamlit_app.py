@@ -23,6 +23,11 @@ selected_x_var = st.selectbox('What do you want the x variable to be?', ['bill_l
 selected_y_var = st.selectbox('What about y?', ['bill_depth_mm', 'bill_length_mm', 'flipper_length_mm', 'body_mass_g'])
 
 fig, ax = plt.subplots()
+markers = {
+    'Adelie': 'X',
+    'Gentoo': 's',
+    'Chinstrap': 'o'
+}
 ax = sns.scatterplot(x = penguins_df[selected_x_var], y = penguins_df[selected_y_var], hue = penguins_df['species'], markers = markers, style = 'species')
 plt.title('Scatterplot of Palmers Penguins', fontsize = 18, color = 'orange')
 plt.xlabel(selected_x_var, fontsize = 14, color = 'orange')
