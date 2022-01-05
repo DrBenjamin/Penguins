@@ -33,7 +33,7 @@ markers = {
     'Gentoo': 's',
     'Chinstrap': 'o'
 }
-ax = sns.scatterplot(penguins_df, x = x, y = y, hue = 'species', markers = markers, style = 'species')
+ax = sns.scatterplot(data = penguins_df, x = x, y = y, hue = 'species', markers = markers, style = 'species')
 plt.title('Scatterplot of Palmers Penguins', fontsize = 18, color = 'orange')
 plt.xlabel(selected_x_var, fontsize = 14, color = 'orange')
 plt.ylabel(selected_y_var, fontsize = 14, color = 'orange')
