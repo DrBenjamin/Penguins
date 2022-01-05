@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import matplotlib as plt
+import matplotlib-inline as plt
 import seaborn as sns
 
 st.title("Palmer's Penguins")
