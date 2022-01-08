@@ -17,7 +17,8 @@ penguin_file = st.file_uploader('Select Your Local Penguins CSV File (default pr
 if penguin_file is not None:
     penguins_df = pd.read_csv(penguin_file)
 else:
-    penguins_df = pd.read_csv('penguins.csv')
+    st.stop()
+    #penguins_df = pd.read_csv('penguins.csv')
 
 # User selection
 selected_x_var = st.selectbox('What do you want the x variable to be?', ['bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g'])
@@ -38,7 +39,7 @@ markers = {
     'Gentoo': 's',
     'Chinstrap': 'o'
 }
-ax = sns.scatterplot(data = penguins_df, x = x, y = y, hue = 'species', markers = markers, style = 'species')
+ax = sns.scatterplot(data = penguins_df, x = x, y = y, hue = 'species', markers = markers, style = 'Species')
 plt.title('Scatterplot of Palmers Penguins', fontsize = 18, color = 'orange')
 plt.xlabel(selected_x_var, fontsize = 14, color = 'orange')
 plt.ylabel(selected_y_var, fontsize = 14, color = 'orange')
