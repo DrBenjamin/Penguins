@@ -26,8 +26,12 @@ selected_y_var = st.selectbox('What about y?', ['bill_depth_mm', 'bill_length_mm
 x = penguins_df[selected_x_var].fillna(method = 'ffill')
 y = penguins_df[selected_y_var].fillna(method = 'ffill')
 
-# Plotting
+## Plotting
+# Color tweaks
 sns.set_style('darkgrid')
+sns.set(style = "ticks", context = "talk")
+plt.style.use("dark_background")
+# Setting plot
 fig, ax = plt.subplots()
 markers = {
     'Adelie': 'X',
