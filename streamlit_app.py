@@ -27,6 +27,7 @@ x = penguins_df[selected_x_var].fillna(method = 'ffill')
 y = penguins_df[selected_y_var].fillna(method = 'ffill')
 
 # Plotting
+sns.set_style('darkgrid')
 fig, ax = plt.subplots()
 markers = {
     'Adelie': 'X',
