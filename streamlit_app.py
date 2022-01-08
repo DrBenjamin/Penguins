@@ -13,12 +13,11 @@ st.title("Palmer's Penguins")
 st.markdown('Use this Streamlit app to make your own scatterplot about penguins!')
 
 # Ask for data
-penguin_file = st.file_uploader('Select Your Local Penguins CSV File (default provided)')
+penguin_file = st.file_uploader('Select Your Local Penguins CSV File')
 if penguin_file is not None:
     penguins_df = pd.read_csv(penguin_file)
 else:
     st.stop()
-    #penguins_df = pd.read_csv('penguins.csv')
 
 # User selection
 selected_x_var = st.selectbox('What do you want the x variable to be?', ['bill_length_mm', 'bill_depth_mm', 'flipper_length_mm', 'body_mass_g'])
