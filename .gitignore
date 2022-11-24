@@ -3,3 +3,4 @@ secrets.toml
 .streamlit/
 .DS_Store
 .ipynb
+.Rproj.user
