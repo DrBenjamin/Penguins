@@ -1,8 +1,5 @@
 ##### `streamlit_app.py`
 ##### Penguins data visualisation example
-
-
-
 #### Loading needed Python libraries
 import streamlit as st
 import pandas as pd
